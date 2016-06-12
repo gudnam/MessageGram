@@ -6,4 +6,11 @@ public class 다스림 extends 권한 {
 		// TODO Auto-generated method stub
 		return 2;
 	}
+
+	@Override
+	public boolean equals(Object obj) {
+		// TODO Auto-generated method stub
+		권한 authority = (권한) obj;
+		return authority instanceof 다스림;
+	}
 }

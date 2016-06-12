@@ -22,18 +22,11 @@ public class 사람 extends 작품 implements 죄 {
 	}
 	
 	public void setAuthority_자유(자유 free) {
-		authorities.put(free, true);
+		authorities.put(free, false);
 	}
 	
 	public void select() {
-		boolean isFree = false;
-		Iterator<권한> iterator = authorities.keySet().iterator();
-		while(iterator.hasNext()) {
-			권한 key = iterator.next();
-			if( key instanceof 자유) {
-				isFree = authorities.get(key);
-			}
-		}
+		boolean isFree = authorities.get(new 자유());
 		if( isFree)
 			isGood = false;
 	}
