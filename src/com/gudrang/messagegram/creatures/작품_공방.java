@@ -6,16 +6,16 @@ import com.gudrang.messagegram.creatures.object.빛;
 import com.gudrang.messagegram.creatures.object.우주;
 import com.gudrang.messagegram.creatures.object.지구;
 
-public class 작품 {
+public class 작품_공방 {
 	
-	빛 light;
-	우주 space;
-	지구 earth;
-	사람 child;
-	교회 church;
+	작품 light;
+	작품 space;
+	작품 earth;
+	작품 child;
+	작품 church;
 	
-	protected 작품() { }
-	public 작품( 작품_Builder builder) {
+	protected 작품_공방() { }
+	public 작품_공방( 작품_Builder builder) {
 		this.light = builder.light;
 		this.space = builder.space;
 		this.earth = builder.earth;
@@ -25,11 +25,11 @@ public class 작품 {
 	
 	public static class 작품_Builder {
 		
-		빛 light;
-		우주 space;
-		지구 earth;
-		사람 child;
-		교회 church;
+		작품 light;
+		작품 space;
+		작품 earth;
+		작품 child;
+		작품 church;
 
 		public 작품_Builder create_빛() {
 			this.light = new 빛();
@@ -56,8 +56,8 @@ public class 작품 {
 			return this;
 		}
 		
-		public 작품 build() {
-			return new 작품( this);
+		public 작품_공방 build() {
+			return new 작품_공방( this);
 		}
 	}
 }
